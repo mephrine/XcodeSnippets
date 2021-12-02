@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>nvm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import Domain
+import Foundation
+import InjectPropertyWrapper
+import Logger
+import RxCocoa
+import RxFlow
+import RxSwift
+
+public final class &lt;#name#&gt;ViewModel: ViewActionTransformable, Stepper, HasDisposeBag {
+  // MARK: - Action
+  public struct Action {
+  }
+  
+  // MARK: - State
+  public struct State {
+  }
+  
+  // MARK: - Inject
+  
+  // MARK: - Properties
+  public var steps = PublishRelay&lt;Step&gt;()
+  var disposeBag = DisposeBag()
+  
+  // MARK: - Initialize
+  public init() {}
+  
+  deinit {
+    Logger.i("deinit : \(Self.self)")
+  }
+}
+
+// MARK: - Transformation
+extension &lt;#name#&gt;ViewModel {
+  public func transform(action: Action) -&gt; State {
+    return State()
+  }
+}
+
+// MARK: - UseCase
+extension &lt;#name#&gt;ViewModel {
+  
+}
+
+// MARK: - Route
+extension &lt;#name#&gt;ViewModel {
+ 
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A5945BD7-997B-40B1-8B20-D54CD0947E7B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Make a normal view model</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Normal View Model</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

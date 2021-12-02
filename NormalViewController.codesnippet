@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>nvc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import InjectPropertyWrapper
+import UIKit
+
+final class &lt;#name#&gt;ViewController: BaseViewController, HasViewModel {
+  // MARK: - Constants
+  private enum UI {
+    enum Color {
+      static let navigationBackground: UIColor = .systemBlue
+      static let navigationTitle: UIColor = .black
+    }
+  }
+  
+  // MARK: - Injection
+  @Inject var viewModel: &lt;#name#&gt;ViewModel
+  
+  // MARK: - UI
+  private let containerView = &lt;#name#&gt;View(frame: .zero)
+  
+  // MARK: - View Life Cycle
+  public override func loadView() {
+    self.view = containerView
+  }
+  
+  override public func viewDidLoad() {
+    super.viewDidLoad()
+    setupNavigationBar()
+    bindUI()
+  }
+  
+  override func setupConstraints() {
+  }
+}
+
+extension &lt;#name#&gt;ViewController {
+  // MARK: - Layout
+  private func setupNavigationBar() {
+    self.navigationController?.navigationBar.barTintColor = UI.Color.navigationBackground
+    self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UI.Color.navigationTitle]
+  }
+  // MARK: - Configuring
+  private func bindUI() {
+    
+  }
+}
+
+
+// MARK: - Event
+extension &lt;#name#&gt;ViewController {
+  
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>281C277D-1C6C-4F52-9E93-39B70D73989C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Make a normal viewcontroller</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Normal View Controller</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
