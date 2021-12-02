@@ -17,7 +17,7 @@ import RxCocoa
 import RxFlow
 import RxSwift
 
-public final class &lt;#name#&gt;ViewModel: ViewActionTransformable, Stepper, HasDisposeBag {
+final class &lt;#name#&gt;ViewModel: ViewActionTransformable, Stepper, HasDisposeBag {
   // MARK: - Action
   public struct Action {
   }
